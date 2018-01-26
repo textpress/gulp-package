@@ -1,0 +1,32 @@
+{
+  "name": "@textpress/gulp-package",
+  "version": "0.1.0",
+  "description": "Packages a build folder",
+  "main": "lib/index.js",
+  "repository": "github:textpress/gulp-package",
+  "license": "UNLICENSED",
+  "scripts": {
+    "bump": "gulp bump --part",
+    "build": "yarn run build:clean && yarn run build:lib",
+    "build:clean": "rimraf lib",
+    "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
+    "ci-build": "yarn run build",
+    "ci-release-notes": "conventional-github-releaser -p eslint"
+  },
+  "peerDependencies": {
+    "gulp": "*"
+  },
+  "dependencies": {
+    "gulp-zip": "*"
+  },
+  "devDependencies": {
+    "@textpress/babel-preset-textpress": "*",
+    "@textpress/eslint-config-textpress": "*",
+    "@textpress/gulp-bump-version": "*",
+    "babel-register": "^6.26.0",
+    "conventional-github-releaser": "^2.0.0",
+    "eslint": "^4.15.0",
+    "gulp": "^3.9.1",
+    "rimraf": ">=2.6.1"
+  }
+}

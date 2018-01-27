@@ -1,6 +1,6 @@
 {
   "name": "@textpress/gulp-package",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Packages a build folder",
   "main": "lib/index.js",
   "repository": "github:textpress/gulp-package",

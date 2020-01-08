@@ -1,32 +1,38 @@
 {
-  "name": "@textpress/gulp-package",
-  "version": "0.1.2",
-  "description": "Packages a build folder",
-  "main": "lib/index.js",
-  "repository": "github:textpress/gulp-package",
-  "license": "UNLICENSED",
-  "scripts": {
-    "bump": "gulp bump --part",
-    "build": "yarn run build:clean && yarn run build:lib",
-    "build:clean": "rimraf lib",
-    "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
-    "ci-build": "yarn run build",
-    "ci-release-notes": "conventional-github-releaser -p eslint"
-  },
-  "peerDependencies": {
-    "gulp": "*"
-  },
-  "dependencies": {
-    "gulp-zip": "*"
-  },
-  "devDependencies": {
-    "@textpress/babel-preset-textpress": "*",
-    "@textpress/eslint-config-textpress": "*",
-    "@textpress/gulp-bump-version": "*",
-    "babel-register": "^6.26.0",
-    "conventional-github-releaser": "^2.0.0",
-    "eslint": "^4.15.0",
-    "gulp": "^3.9.1",
-    "rimraf": ">=2.6.1"
-  }
+    "name": "@textpress/gulp-package",
+    "version": "0.1.2",
+    "description": "Packages a build folder",
+    "main": "lib/index.js",
+    "repository": "github:textpress/gulp-package",
+    "license": "UNLICENSED",
+    "scripts": {
+        "bump": "gulp bump --part",
+        "build": "yarn run build:clean && yarn run build:lib",
+        "build:clean": "rimraf lib",
+        "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
+        "ci-build": "yarn run build",
+        "ci-release-notes": "conventional-github-releaser -p eslint"
+    },
+    "peerDependencies": {
+        "gulp": "*"
+    },
+    "dependencies": {
+        "gulp-zip": "*"
+    },
+    "devDependencies": {
+        "@textpress/babel-preset-textpress": "*",
+        "@textpress/eslint-config-textpress": "*",
+        "@textpress/gulp-bump-version": "*",
+        "babel-register": "^6.26.0",
+        "chalk": "^2.3.2",
+        "conventional-github-releaser": "^2.0.0",
+        "eslint": "^4.15.0",
+        "fancy-log": "^1.3.2",
+        "gulp": "4.0.2",
+        "gulp-confirm": "1.0.8",
+        "gulp-exec": "4.0.0",
+        "gulp-print": "5.0.2",
+        "rimraf": ">=2.6.1",
+        "yargs": "15.1.0"
+    }
 }
